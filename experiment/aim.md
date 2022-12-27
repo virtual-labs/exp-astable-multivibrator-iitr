@@ -1,1 +1,1 @@
-### Aim of the experiment
+#### To construct and study the operation of an Astable Multivibrator by using 555 Timer IC.
