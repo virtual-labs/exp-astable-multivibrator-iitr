@@ -1,39 +1,10 @@
-{
-  "version": 2.0,
-  "questions": [
-    {
-      "question": "This is a Sample Question 1?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    }
-  ]
-}
+[{"question":"An Astable Multivibrator has","answers":{"a":"One stable state","b":"Two stable states","c":"No stable state","d":"None of the above"},"correctAnswer":"c"},
+{"question":"The external triggering is not needed for the transition of state in the","answers":{"a":"Bistable multivibrator","b":"Monostable multivibrator","c":"Astable multivibrator","d":"Both b and c"},"correctAnswer":"c"},
+{"question":"How to achieve 50 % duty cycle in adjustable rectangular wave generator? (Assume R\u2081, Resistor connected between supply and discharge and R\u2082, Resistor connected between discharge and trigger input.)","answers":{"a":"R\u2081 < R\u2082","b":"R\u2081 > R\u2082","c":"R\u2081 = R\u2082","d":"R\u2081 ≥ R\u2082"},"correctAnswer":"c"},
+{"question":"When 555 Timer IC is configured as an astable multivibrator, its duty cycle is determined by","answers":{"a":"Internal resistors","b":"External resistors","c":"Capacitors","d":"Inductors"},"correctAnswer":"b"},
+{"question":"What is the duty cycle of the waveform at the output of the circuit given below?","image":"<img src='images/posttestques5.png'/>","answers":{"a":"78%","b":"56%","c":"50%","d":"44%"},"correctAnswer":"b"},
+{"question":"Find the charging and discharging time of 0.5 µF capacitor.","image":"<img src='images/posttestques6.png'/>","answers":{"a":"Charging time = 2ms, Discharging time = 5ms","b":"Charging time = 5ms, Discharging time = 2ms","c":"Charging time = 3ms, Discharging time = 5ms","d":"Charging time = 5ms, Discharging time = 3ms"},"correctAnswer":"b"},
+{"question":"Determine the output frequency of the circuit.","image":"<img src='images/posttestques7.png'/>","answers":{"a":"1450 Hz","b":"1333 Hz","c":"1871 Hz","d":"1700 Hz"},"correctAnswer":"c"},
+{"question":"Astable multivibrator cannot be used for frequency division?","answers":{"a":"True","b":"False"},"correctAnswer":"b"},
+{"question":"An Astable multivibrator operating at 150 Hz has a discharge time of 2.5 ms. Find the duty cycle of the circuit.","answers":{"a":"50 %","b":"75 %","c":"95.99 %","d":"37.5 %"},"correctAnswer":"d"},
+{"question":"An astable multivibrator circuit using 555 Timer IC is shown below. Assume that the circuit is oscillating steadily from","image":"<img src='images/posttestques10.png'/>","answers":{"a":"3V to 5V","b":"3V to 6V","c":"3.6V to 6V","d":"3.6V to 5V"},"correctAnswer":"b"}]
