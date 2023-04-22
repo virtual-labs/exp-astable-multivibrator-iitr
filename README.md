@@ -4,11 +4,11 @@
 <b>Discipline | <b>Electronics and Communication Engineering
 :--|:--|
 <b> Lab | <b> Analog and Digital Electronics-II
-<b> Experiment|     <b> To construct and study the operation of an Astable Multivibrator by using 555 Timer IC.
+<b> Experiment|     <b> To design astable multivibrator using 555 timer IC
 
 ### About the Experiment 
 
-Fill a brief description of this experiment here
+To construct and study the operation of an Astable Multivibrator by using 555 Timer IC
 
 <b>Name of Developer | <b> Prof RS Anand 
 :--|:--|
