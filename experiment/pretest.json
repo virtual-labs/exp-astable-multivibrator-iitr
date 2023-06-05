@@ -1,10 +1,46 @@
-[{"question":"What is the duty cycle of the output of an astable multivibrator?","answers":{"a":"50 %","b":"100 %","c":"75 %","d":"55 %"},"correctAnswer":"a"},
-{"question":"The ________ is defined as the active output time divided by the total period of the output signal.","answers":{"a":"On time","b":"Off time","c":"Duty cycle","d":"Active ratio"},"correctAnswer":"c"},
-{"question":"An astable multivibrator requires","answers":{"a":"Balanced time constants.","b":"A pair of matched transistors.","c":"No input signal.","d":"Dual J-K flip-flops."},"correctAnswer":"c"},
-{"question":"How do we obtain a symmetrical waveform in Astable Multivibrator?","answers":{"a":"Use clocked RS flip-flop","b":"Use clocked JK flip-flop","c":"Use clocked D-flip-flop","d":"Use clocked T-flip-flop"},"correctAnswer":"b"},
-{"question":"An astable multivibrator has","answers":{"a":"One quasi stable state.","b":"Two quasi stable states","c":"No quasi stable state","d":"None of the above"},"correctAnswer":"b"},
-{"question":"By using norm of potentiometer, which physical quantity of the square wave can be altered?","answers":{"a":"Amplitude","b":"Frequency","c":"Wavelength","d":"Speed"},"correctAnswer":"b"},
-{"question":"Name the multivibrator that is most commonly used as relaxation oscillator.","answers":{"a":"Bistable multivibrator","b":"Astable multivibrator","c":"Monostable multivibrator","d":"None of the above"},"correctAnswer":"b"},
-{"question":"An integrated circuit which is used in a variety of timer, pulse generation and oscillator applications is","answers":{"a":"555 timer","b":"7806IC","c":"7909IC","d":"225IC"},"correctAnswer":"a"},
-{"question":"Free running frequency of Astable multivibrator is","image":"<img src='images/pretestques9.png'/>","answers":{"a":"f = 1.45/(R\u2081+2R\u2082)C","b":"f = 1.45(R\u2081+2R\u2082)C","c":"f = 1.45C/(R\u2081+2R\u2082)","d":"f = 1.45R\u2081/(R\u2081+R\u2082)"},"correctAnswer":"a"},
-{"question":"In an astable multivibrator using 555 Timer IC the capacitor always charges between","answers":{"a":"0 and Vcc","b":"0 and 2/3 Vcc","c":"1/3 Vcc and 2/3 Vcc","d":"None"},"correctAnswer":"c"}]
+[{
+	"question": "In astable mode of 555 timer, control pin is decoupled by__________.",
+	"answers": {
+		"a": "Resistor",
+		"b": "Inductor",
+		"c": "Capacitor",
+		"d": "Supply"
+	},
+	"correctAnswer": "c"
+}, {
+	"question": "555 timer consists basically of__________.",
+	"answers": {
+		"a": "One comparator",
+		"b": "Two comparators",
+		"c": "Three comparators",
+		"d": "Four comparators"
+	},
+	"correctAnswer": "b"
+}, {
+	"question": "An integrated circuit which is used in a Variety of timer, pulse generation, and oscillator applications is",
+	"answers": {
+		"a": "555 timer",
+		"b": "IC 7806",
+		"c": "IC 7909",
+		"d": "IC 2251"
+	},
+	"correctAnswer": "a"
+}, {
+	"question": "When 555 timer is configured as an astable multi Vibrator, its duty cycle is determined by__________.",
+	"answers": {
+		"a": "Internal resistors",
+		"b": "External resistors",
+		"c": "Capacitors",
+		"d": "Inductors"
+	},
+	"correctAnswer": "b"
+}, {
+	"question": "Astable mode is also called__________.",
+	"answers": {
+		"a": "Bounded mode",
+		"b": "Single level mode",
+		"c": "Neutral mode",
+		"d": "Free running mode"
+	},
+	"correctAnswer": "d"
+}]
