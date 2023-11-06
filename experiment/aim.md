@@ -1,1 +1,1 @@
-#### To study astable and monostable multivibrator using IC 555.
+#### To construct and study the operation of an Astable Multivibrator by using 555 Timer IC.

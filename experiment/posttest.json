@@ -1,46 +1,10 @@
-[{
-	"question": "Multivibrator in which circuit is stable in either state and can be flipped from one state to other by an external trigger pulse is termed as__________.",
-	"answers": {
-		"a": "Astable multivibrator",
-		"b": "Monostable multivibrator",
-		"c": "Bistable multivibrator",
-		"d": "None of the above"
-	},
-	"correctAnswer": "b"
-}, {
-	"question": "Popular astable circuit is composed of__________.",
-	"answers": {
-		"a": "Two inverters",
-		"b": "One inverter",
-		"c": "One buffer",
-		"d": "Two buffers"
-	},
-	"correctAnswer": "a"
-}, {
-	"question": "Circuit which consist of a quasi-stable state is called__________.",
-	"answers": {
-		"a": "Bistable circuit",
-		"b": "Monostable circuit",
-		"c": "Tristate circuit",
-		"d": "None of the above"
-	},
-	"correctAnswer": "b"
-}, {
-	"question": "Capacitor discharge interval in monostable circuits is known as__________.",
-	"answers": {
-		"a": "Dynamic time",
-		"b": "Static time",
-		"c": "Refresh time",
-		"d": "Recovery time"
-	},
-	"correctAnswer": "d"
-}, {
-	"question": "Multivibrator which can produce a very short pulse or a much longer rectangular shaped waveform whose leading edge rises in time with externally applied trigger pulse is called__________.",
-	"answers": {
-		"a": "Astable multivibrator",
-		"b": "Bistable multivibrator",
-		"c": "Monostable multivibrator",
-		"d": "Tristable multivibrator"
-	},
-	"correctAnswer": "c"
-}]
+[{"question":"An Astable Multivibrator has","answers":{"a":"One stable state","b":"Two stable states","c":"No stable state","d":"None of the above"},"correctAnswer":"c"},
+{"question":"The external triggering is not needed for the transition of state in the","answers":{"a":"Bistable multivibrator","b":"Monostable multivibrator","c":"Astable multivibrator","d":"Both b and c"},"correctAnswer":"c"},
+{"question":"How to achieve 50 % duty cycle in adjustable rectangular wave generator? (Assume R\u2081, Resistor connected between supply and discharge and R\u2082, Resistor connected between discharge and trigger input.)","answers":{"a":"R\u2081 < R\u2082","b":"R\u2081 > R\u2082","c":"R\u2081 = R\u2082","d":"R\u2081 ≥ R\u2082"},"correctAnswer":"c"},
+{"question":"When 555 Timer IC is configured as an astable multivibrator, its duty cycle is determined by","answers":{"a":"Internal resistors","b":"External resistors","c":"Capacitors","d":"Inductors"},"correctAnswer":"b"},
+{"question":"What is the duty cycle of the waveform at the output of the circuit given below?","image":"<img src='images/posttestques5.png'/>","answers":{"a":"78%","b":"56%","c":"50%","d":"44%"},"correctAnswer":"b"},
+{"question":"Find the charging and discharging time of 0.5 µF capacitor.","image":"<img src='images/posttestques6.png'/>","answers":{"a":"Charging time = 2ms, Discharging time = 5ms","b":"Charging time = 5ms, Discharging time = 2ms","c":"Charging time = 3ms, Discharging time = 5ms","d":"Charging time = 5ms, Discharging time = 3ms"},"correctAnswer":"b"},
+{"question":"Determine the output frequency of the circuit.","image":"<img src='images/posttestques7.png'/>","answers":{"a":"1450 Hz","b":"1333 Hz","c":"1871 Hz","d":"1700 Hz"},"correctAnswer":"c"},
+{"question":"Astable multivibrator cannot be used for frequency division?","answers":{"a":"True","b":"False"},"correctAnswer":"b"},
+{"question":"An Astable multivibrator operating at 150 Hz has a discharge time of 2.5 ms. Find the duty cycle of the circuit.","answers":{"a":"50 %","b":"75 %","c":"95.99 %","d":"37.5 %"},"correctAnswer":"d"},
+{"question":"An astable multivibrator circuit using 555 Timer IC is shown below. Assume that the circuit is oscillating steadily from","image":"<img src='images/posttestques10.png'/>","answers":{"a":"3V to 5V","b":"3V to 6V","c":"3.6V to 6V","d":"3.6V to 5V"},"correctAnswer":"b"}]

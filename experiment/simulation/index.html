@@ -1,71 +1,1112 @@
-<html>
-    <head>
+<!DOCTYPE html>
+<html lang="en">
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> To design astable multivibrator using 555 timer IC</title>
+
+    <!--Knob CSS-->
+    <link rel="stylesheet" href="css/ui.css" />
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/p1.css">
+
+    <!--Knob JS-->
+    <script src="js/Knob.js"></script>
+    <script src="js/ui.js"></script>
+    <script type="text/javascript" src="js/knob1.js"></script>
+    <script type="text/javascript" src="js/p1.js"></script>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+    <!--JSplumb CSS-->
+    <link rel="stylesheet" href="css\jsplumbtoolkit-defaults.css">
+
+    <!--JSplumb JS-->
+    <script src="js\jsplumb.min.js"></script>
+    <script src="js\jquery-latest.js"></script>
+    <script src="js\jquery-ui-latest.js"></script>
+    <script src="js\jquery.jsPlumb-1.3.9-all-min.js"></script>
+
+
+    <!--jQuery-->
+    <script src="js\jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+    <!--Display JS-->
+    <script src="js\excanvas.js"></script>
+    <script src="js\segment-display.js"></script>
+
+    <!--JS files-->
+    <script src="js/index.js"></script>
+    <script src="js/graph.js"></script>
+
+    <!--CSS files-->
+    <link rel="stylesheet" href="css/style.css">
 
     <style>
-        body {
-            font-family: Arial;
-            background: linear-gradient(45deg,#EE7752,#E73C7E,#23A6D4,#23D5BE,#228B22);
-            background-size: 400% 400%;
-            position:relative;
-            animation: change 10s ease-in-out infinite;/*for single color*/
+        .ui-knob {
+            position: relative;
+            width: 44px;
+            height: 44px;
+            border-radius: 50px;
+            background-color: #3c8dbc;
+            /* center the div */
+            top: 50%;
+            left: 50%;
         }
         
-        a{
-            background:rgb(0,0,0,0.7);
-            color:white;
-            position:relative;
-            padding:20px 30px;
-            text-decoration: none;
-            border-radius:4px;
+        .ui-indicator {
+            position: absolute;
+            /* Due to a display bug with anti-aliasing */
+            border: 1px solid #808080;
+            background-color: #f2f2f2;
         }
-        a:hover{
-            background: rgb(0,0,0,0.5);
-            text-decoration: none;
-            color:white;
+        
+        .rotate.ui-indicator {
+            height: 10px;
+            width: 10px;
+            margin-top: 28px;
+            margin-left: 28px;
+            border-radius: 50%;
         }
-        a:active{
-            background: rgb(0,0,0,0.6);
-            text-decoration: none;
-            color:white;
+        
+        .position-rotate.ui-indicator {
+            height: 10px;
+            width: 10px;
+            margin-top: 49px;
+            margin-left: 63px;
+            border-radius: 50%;
         }
-        a:visited{
-            background: rgb(0,0,0,0.6);
-            text-decoration: none;
-            color:white;
+        
+        #stopbutton {
+            border: 4px solid rgb(153, 141, 141);
+            padding: 3px;
+            border-radius: 2px;
         }
-        a:link{
-            text-decoration: none;
-        }
-        h1{
-            color:white;
-        }
-</style>
-    </head>
-    <body >
+    </style>
 
-     
-           <!-- Content Wrapper. Contains page content -->
-      <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
+</head>
 
-            <h1 align="center">Monostable and Astable Multivibrators.
-        </h1><br><br>
-            <!-- Write your experiment name -->
-            <h1 align="center">Simulation
-        </h1><br><br>
-          <center>
-            <a style="width:auto; height:50px;padding-top: 14px;" class="btn btn-primary" href="mono/simulate.html" target="_blank">Monostable Multivibrator</a> &nbsp;&nbsp;&nbsp;
-			<a style="width:auto; height:50px;padding-top: 14px;" class="btn btn-primary" href="astable/simulate.html" target="_blank">Astable Multivibrator</a>
-            </center> 
-          </section>
+<body>
+
+   
+    <div id="exp-name">
+        <h3> To design astable multivibrator using 555 timer IC</h3>
+    </div>
+    <div id="simulation">
+        <div class="left">
+
+            <div id="mid">
+
+
+                <div>
+
+
+                    <div id="mydiv" style="padding-left:5px; padding-right: 5px; padding-top: 7px; padding-bottom: 7px; visibility: visible; z-index:10;">
+
+                        <canvas id="canvas" width="400" height="290" style=" z-index: 2; position: absolute;">
+
+            </canvas>
+                        <img src="images\CROscreen.png" width="400" height="290" id="img" style="position: absolute; z-index: 1;background-color: #32a836;">
+
+                        <div id="knobs" style=" width: 420px; height: 294px; position: absolute; left: 410px; z-index: 1;">
+                            <code style="font-weight: bolder; float: left;margin-left: 20px;">Y-Shift</code>
+                            <code style="font-weight: bolder; float: right;margin-right: 20px;">X-Shift</code>
+                            <input id="position-rotate" name="rotate" type="range" value="-37" min="-235" max="150" style="visibility: hidden;" data-angle-start="0" data-angle-end="360" data-indicator-auto-position="true" data-indicator-auto-rotate="true" data-indicator-radius="14"
+                            />
+
+                            <button id="stopbutton" onclick="stop();" style="position: absolute;margin-left: 188px; margin-top: 18px;">STOP</button>
+
+
+                            <input id="rotate" name="rotate" type="range" value="0" min="-150" max="150" style="visibility: hidden;" data-angle-start="0" data-angle-end="360" data-indicator-auto-position="true" data-indicator-auto-rotate="true" data-indicator-radius="14" /><br><br>
+                            <ul class="row">
+
+                                <li class="column">
+                                    <input class="preset1" type="range" id="ch1" min="-6" max="6" data-width="130" data-height="130" data-angleOffset="220" data-angleRange="280" step="2" />
+
+                                    <code style="font-weight: bolder;">mV/div&nbsp;&nbsp;CH1&nbsp;&nbsp;V/div</code>
+
+                                </li>
+                                <li class="column">
+                                    <input class="preset1" type="range" min="0" max="2.5" id="time" value="0" data-width="130" data-height="130" data-angleOffset="220" data-angleRange="280" step="0.5" />
+                                    <code style="font-weight: bolder;">TIME(ms/div)</code>
+
+
+
+                                </li>
+
+                                <li class="column">
+                                    <input class="preset1" type="range" min="-6" id="ch2" max="6" data-width="130" data-height="130" data-angleOffset="220" data-angleRange="280" step="2" />
+
+                                    <code style="font-weight: bolder;">mV/div&nbsp;&nbsp;CH2&nbsp;&nbsp;V/div</code>
+
+
+
+                                </li>
+
+                            </ul>
+                            <input type="hidden" id="channel" name="channel" value="">
+                        </div>
+
+
+                        <svg>
+              <filter id="dropshadow" height="150%" width="150%">
+                <feGaussianBlur in="SourceAlpha" stdDeviation="2" />
+                <feOffset dx="0" dy="3" result="offsetblur" />
+                <feMerge>
+                  <feMergeNode />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </svg>
+                    </div>
+
+                </div>
+
+
+
+
+                <div id="supply"></div>
+
+                <div id="cro"></div>
+
+
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+
+
+                <div id="board" class="float-container">
+                    <div id="ptm" class="float-child">
+                        <div id="ptmknob"></div>
+                        <div id="ptmpins"></div>
+                    </div>
+                    <div id="knb">
+                        <div id="mydiv2" style="margin-top: 60px; visibility: visible; z-index:10;">
+                            <div id="knobs2">
+                                <input class="preset1" type="range" id="ch3" min="0" max="20" data-width="70" data-height="80" data-angleOffset="40" data-angleRange="270" step="5" />
+
+                            </div>
+
+                            <svg>
+                <filter id="dropshadow" height="150%" width="150%">
+                  <feGaussianBlur in="SourceAlpha" stdDeviation="2" />
+                  <feOffset dx="0" dy="3" result="offsetblur" />
+                  <feMerge>
+                    <feMergeNode />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </svg>
+                        </div>
+                    </div>
+
+                    <div id="ic" class="float-child"></div>
+                    <div id="c1" class="float-child"></div>
+                    <div id="r1" class="float-child"></div>
+                    <div id="c2" class="float-child"></div>
+                    <b style="margin-left: 145px;" id="ptm-text">Potentiometer (KΩ)</b>
+                    <div id="ptm_label">A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C</div>
+                    <div id="c1_label">A&nbsp;&nbsp;&nbsp;&nbsp; C</div>
+                    <div id="r11_label">A</div>
+                    <div id="r12_label">C</div>
+                    <div id="c2_label">A&nbsp;&nbsp;&nbsp;&nbsp; C</div>
+                </div>
+
+
+
+
+            </div>
+
+            <div class="bottom">
+                <div>
+                    <button id="check" onclick="checkCircuit()" disabled>Check Connection</button>
+                    <button id="reset" onclick="reload()" disabled>Reset</button>
+                </div>
+            </div>
         </div>
-    </body>
-</html>
 
+        <div class="right" id="right_tab">
+            <div class="Button-data" id="First_Data">
+                <div class="panel" style="padding-top:20px;">
+                    <div class="corner">
+                        <button class="close-btn" id="close-btn"><span>&#10005</span></button>
+                    </div>
+                    <ol type="1" style="padding-left: 20px;padding-top:0px;text-align: left;">
+                        <li>Click on the components button to place the component.</li>
+                        <li>Make connections as per the circuit diagram and pin diagram.</li>
+                        <figure>
+                            <img src="./images/image001.png" style="height: 160px; margin-left: 110px;">
+                            <figcaption style="text-align: center;">Fig. 1 Circuit diagram of astable multivibrator</figcaption>
+                          </figure>
+                          <figure>
+                            <img src="./images/image002.gif" style="height: 130px; margin-left: 100px;">
+                            <figcaption style="text-align: center;">Fig. 2 Pin diagram of IC 555</figcaption>
+                          </figure>
+                        <li>Click on Check Connections button. If connections are right, click on ‘OK’, then Simulation will become active.</li>
+                        <li>Set R1= 5 kΩ by using potentiometer knob.</li>
+                        <li>Connect CH1/CH2 of C.R.O. to output terminal of the circuit. </li>
+                        <li>Observe output wave on C.R.O by adjusting C.R.O channel CH1/CH2 and TIME knobs.</li>
+                        <li>Use X Shift and Y Shift buttons for wave shifting.</li>
+                        <li>Measure the frequency of output wave at C.R.O. </li>
+                        <li>Fill the observation table by required values.</li>
+                        <li>Repeat steps 5, 6, 7, 8 and 9 for the different values of R1= 10 kΩ, 15 kΩ and 20 kΩ.</li>
+                        <li>Compare both experimental and theoretical frequencies.</li>
+                    </ol>
+                       
+                </div>
+            </div>
+
+
+            <div>
+                <button class="right_btn" id="First">Instructions</button>
+
+            </div>
+
+
+            <div class="Components">
+
+                <button class="right_btn" id="second">Components</button>
+
+                <div>
+                    <button class="cmpbutton" id="breadbutton" onclick="breadboard()">Breadboard</button>
+                    <button class="cmpbutton" id="supplybutton" onclick="supply()">Supply</button>
+                </div>
+                <div>
+                    <button class="cmpbutton" id="icbutton" onclick="ic()">555 Timer IC</button>
+                    <button class="cmpbutton" id="c1button" onclick="c1()">10nF Capacitor</button>
+                </div>
+                <div>
+                    <button class="cmpbutton" id="r1button" onclick="r1()">10K&#8486; Resistor</button>
+                    <button class="cmpbutton" id="c2button" onclick="c2()">100nF Capacitor</button>
+                </div>
+                <div>
+                    <button class="cmpbutton" id="ptmbutton" onclick="ptm()">Potentiometer</button>
+                    <button class="cmpbutton" id="crobutton" onclick="cro()">CRO</button>
+                </div>
+                <div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="right" id="obsTable">
+            <div>
+                <button class="right_btn" id="First">Observation Table</button>
+            </div>
+
+            <div class="Components2">
+                <table>
+                    <thead>
+                        <th>S.No.</th>
+                        <th>R1 (K&#8486;)</th>
+                        <th>R2 (K&#8486;)</th>
+                        <th>C (nf)</th>
+                        <th>Theoretical Frequency (Hz)</th>
+                        <th>Duty Cycle(%)</th>
+                        <th>Experimental Frequency (Hz)</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1.</td>
+                            <td><input id="a1" type="text" onchange="calfreq1()"></td>
+                            <td><input id="b1" type="text" onchange="calfreq1()"></td>
+                            <td><input id="d1" type="text" onchange="calfreq1()"></td>
+                            <td id="freq1"></td>
+                            <td id="dc1"></td>
+                            <td><input id="e1" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>2.</td>
+                            <td><input id="a2" type="text" onchange="calfreq2()"></td>
+                            <td><input id="b2" type="text" onchange="calfreq2()"></td>
+                            <td><input id="d2" type="text" onchange="calfreq2()"></td>
+                            <td id="freq2"></td>
+                            <td id="dc2"></td>
+                            <td><input id="e2" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>3.</td>
+                            <td><input id="a3" type="text" onchange="calfreq3()"></td>
+                            <td><input id="b3" type="text" onchange="calfreq3()"></td>
+                            <td><input id="d3" type="text" onchange="calfreq3()"></td>
+                            <td id="freq3"></td>
+                            <td id="dc3"></td>
+                            <td><input id="e3" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>4.</td>
+                            <td><input id="a4" type="text" onchange="calfreq4()"></td>
+                            <td><input id="b4" type="text" onchange="calfreq4()"></td>
+                            <td><input id="d4" type="text" onchange="calfreq4()"></td>
+                            <td id="freq4"></td>
+                            <td id="dc4"></td>
+                            <td><input id="e4" type="text"></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+
+
+        </div>
+    </div>
+    <div id="copyright">
+        <h5>&copy; Copyright 2022 Virtual Labs, IIT Roorkee</h5>
+    </div>
+
+
+
+
+
+
+
+    <!--CRO Codes-->
+
+    <script type="text/javascript">
+        function showAxes(ctx, axes) {
+
+
+            ctx.beginPath();
+            ctx.strokeStyle = "rgb(128,128,128)";
+            ctx.stroke();
+        }
+
+        function plotSquare(ctx, xOffset, yOffset) {
+            var two = document.getElementById("position-rotate").value;
+            var pos = document.getElementById('rotate').value;
+            var fre = document.getElementById("time").value;
+            var three = document.getElementById("ch1").value;
+            var potentiomtr = document.getElementById("ch3").value;
+
+            var width = ctx.canvas.width;
+            var height = ctx.canvas.height;
+            //   var scale = 10;
+
+            if (three == 2) {
+                var a = -10;
+            } else if (three == 4) {
+                a = 39;
+            } else if (three == 6) {
+                a = 50;
+            } else if (three == -4) {
+                a = -400;
+            } else if (three == -2) {
+                a = -600;
+            } else if (three == -6) {
+                a = -200;
+            } else if (three == 0) {
+                a = amplitude;
+            }
+            var frequency = 14.1;
+            ctx.beginPath();
+            ctx.lineWidth = 3;
+            ctx.strokeStyle = "rgb(66,44,255)";
+
+            if (potentiomtr == 0) {
+                p = 0
+            }
+
+            if (fre == 0) {
+                b = -14;
+            } else if (fre == 0.5 && potentiomtr == 5) {
+                var b = 3.25;
+                var p = 5;
+            } else if (fre == 0.5 && potentiomtr == 10) {
+                var b = 2.2;
+                var p = 10;
+            } else if (fre == 0.5 && potentiomtr == 15) {
+                var b = 1.95;
+                var p = 15;
+            } else if (fre == 0.5 && potentiomtr == 20) {
+                var b = 1;
+                var p = 20;
+            } else if (fre == 1 && potentiomtr == 5) {
+                var b = -8.07;
+                var p = 5;
+            } else if (fre == 1 && potentiomtr == 10) {
+                var b = -11;
+                var p = 10;
+            } else if (fre == 1 && potentiomtr == 15) {
+                var b = -13.25;
+                var p = 15;
+            } else if (fre == 1 && potentiomtr == 20) {
+                var b = -16.5;
+                var p = 20;
+            } else if (fre == 1.5 && potentiomtr == 5) {
+                var b = -11.5;
+                var p = 5;
+            } else if (fre == 1.5 && potentiomtr == 10) {
+                var b = -15;
+                var p = 10;
+            } else if (fre == 1.5 && potentiomtr == 15) {
+                var b = -18.5;
+                var p = 15;
+            } else if (fre == 1.5 && potentiomtr == 20) {
+                var b = -22.5;
+                var p = 20;
+            } else if (fre == 2 && potentiomtr == 5) {
+                var b = -13.2;
+                var p = 5;
+            } else if (fre == 2 && potentiomtr == 10) {
+                var b = -17.6;
+                var p = 10;
+            } else if (fre == 2 && potentiomtr == 15) {
+                var b = -21.5;
+                var p = 15;
+            } else if (fre == 2 && potentiomtr == 20) {
+                var b = -25.5;
+                var p = 20;
+            } else if (fre == 2.5 && potentiomtr == 5) {
+                var b = -14.22;
+                var p = 5;
+            } else if (fre == 2.5 && potentiomtr == 10) {
+                var b = -18.5;
+                var p = 10;
+            } else if (fre == 2.5 && potentiomtr == 15) {
+                var b = -23;
+                var p = 15;
+            } else if (fre == 2.5 && potentiomtr == 20) {
+                var b = -27;
+                var p = 20;
+            }
+
+            var x = 0;
+            var y = 0;
+            var amplitude = 60;
+
+
+            if (fre == 0) {
+                while (x < 700) {
+                    //y = height/2 + amplitude * (Math.sin((x+xOffset)/frequency));
+                    y = height / 2.7 + (amplitude - amplitude) * Math.sign(Math.sin((x + xOffset) / (frequency + b + p)));
+
+                    ctx.lineTo(x + 4, y - two);
+                    x += 1;
+
+                }
+            }
+
+            if (fre != 0) {
+                while (x < 700) {
+                    //y = height/2 + amplitude * (Math.sin((x+xOffset)/frequency));
+                    y = height / 2.7 + (amplitude - a) * Math.sign(Math.sin((x + xOffset) / (frequency + b + p)));
+
+                    ctx.lineTo(x + 4 - pos, y - two);
+                    x += 1;
+
+
+                }
+            }
+
+            ctx.stroke();
+            ctx.save();
+
+            //    ctx.stroke();
+            ctx.restore();
+        }
+
+        function plotTri(ctx, xOffset, yOffset) {
+            var two = document.getElementById("position-rotate").value;
+            var pos = document.getElementById('rotate').value;
+            var fre = document.getElementById("time").value;
+            var three = document.getElementById("ch2").value;
+            var width = ctx.canvas.width;
+            var height = ctx.canvas.height;
+
+            var potentiomtr = document.getElementById("ch3").value;
+
+
+            if (three == 2) {
+                var a = -10;
+            } else if (three == 4) {
+                a = 39;
+            } else if (three == 6) {
+                a = 50;
+            } else if (three == -4) {
+                a = -400;
+            } else if (three == -2) {
+                a = -600;
+            } else if (three == -6) {
+                a = -200;
+            } else if (three == 0) {
+                a = amplitude;
+            }
+            var frequency = 14.1;
+            ctx.beginPath();
+            ctx.lineWidth = 3;
+            ctx.strokeStyle = "rgb(66,44,255)";
+            if (potentiomtr == 0) {
+                p = 0
+            }
+
+            if (fre == 0) {
+                b = -14;
+            } else if (fre == 0.5 && potentiomtr == 5) {
+                var b = 3.25;
+                var p = 5;
+            } else if (fre == 0.5 && potentiomtr == 10) {
+                var b = 2.2;
+                var p = 10;
+            } else if (fre == 0.5 && potentiomtr == 15) {
+                var b = 1.95;
+                var p = 15;
+            } else if (fre == 0.5 && potentiomtr == 20) {
+                var b = 1;
+                var p = 20;
+            } else if (fre == 1 && potentiomtr == 5) {
+                var b = -8.07;
+                var p = 5;
+            } else if (fre == 1 && potentiomtr == 10) {
+                var b = -11;
+                var p = 10;
+            } else if (fre == 1 && potentiomtr == 15) {
+                var b = -13.25;
+                var p = 15;
+            } else if (fre == 1 && potentiomtr == 20) {
+                var b = -16.5;
+                var p = 20;
+            } else if (fre == 1.5 && potentiomtr == 5) {
+                var b = -11.5;
+                var p = 5;
+            } else if (fre == 1.5 && potentiomtr == 10) {
+                var b = -15;
+                var p = 10;
+            } else if (fre == 1.5 && potentiomtr == 15) {
+                var b = -18.5;
+                var p = 15;
+            } else if (fre == 1.5 && potentiomtr == 20) {
+                var b = -22.5;
+                var p = 20;
+            } else if (fre == 2 && potentiomtr == 5) {
+                var b = -13.2;
+                var p = 5;
+            } else if (fre == 2 && potentiomtr == 10) {
+                var b = -17.6;
+                var p = 10;
+            } else if (fre == 2 && potentiomtr == 15) {
+                var b = -21.5;
+                var p = 15;
+            } else if (fre == 2 && potentiomtr == 20) {
+                var b = -25.5;
+                var p = 20;
+            } else if (fre == 2.5 && potentiomtr == 5) {
+                var b = -14.22;
+                var p = 5;
+            } else if (fre == 2.5 && potentiomtr == 10) {
+                var b = -18.5;
+                var p = 10;
+            } else if (fre == 2.5 && potentiomtr == 15) {
+                var b = -23;
+                var p = 15;
+            } else if (fre == 2.5 && potentiomtr == 20) {
+                var b = -27;
+                var p = 20;
+            }
+
+            var x = 0;
+            var y = 0;
+            var amplitude = 60;
+
+            if (fre == 0 || p == 0) {
+                while (x < width) {
+
+                    y = height / 2.7 + (amplitude - amplitude) * Math.sign(Math.sin((x + xOffset) / (frequency + b + p)));
+                    ctx.lineTo(x + 4, y - two);
+
+                    x += 1;
+                }
+            }
+            if (fre != 0) {
+                while (x < width) {
+
+                    y = height / 2.7 + (amplitude - a) * Math.sign(Math.sin((x + xOffset) / (frequency + b + p)));
+                    ctx.lineTo(x + 4 - pos, y - two);
+
+                    x += 1;
+                }
+            }
+
+            ctx.stroke();
+
+            ctx.restore();
+        }
+
+        function draw() {
+            var canvas = document.getElementById("canvas");
+            var context = canvas.getContext("2d");
+
+            context.clearRect(0, 0, 600, 600);
+            //showAxes(context);
+            context.save();
+
+            plotSquare(context, step, 20);
+            context.restore();
+
+            step -= 1;
+
+            window.requestAnimationFrame(draw);
+        }
+
+        function spirograph() {
+            var canvas2 = document.getElementById("canvas");
+            var context = canvas2.getContext("2d");
+
+            context.clearRect(0, 0, 600, 600);
+            context.save();
+
+            plotTri(context, step, 10);
+            context.restore();
+            step -= 1;
+
+
+
+            window.requestAnimationFrame(spirograph);
+
+        }
+
+        function init(channel) {
+
+            if (channel == "a") {
+                window.requestAnimationFrame(draw);
+            }
+            if (channel == "b") {
+                window.requestAnimationFrame(spirograph);
+            }
+        }
+
+        var step = 1;
+
+
+        function plotSquare1(ctx, xOffset, yOffset) {
+            var two = document.getElementById("position-rotate").value;
+            var pos = document.getElementById("rotate").value;
+            var fre = document.getElementById("time").value;
+            var three = document.getElementById("ch1").value;
+            var width = ctx.canvas.width;
+            var height = ctx.canvas.height;
+            var potentiomtr = document.getElementById("ch3").value;
+
+
+
+            //   var scale = 10;
+            if (three == 2) {
+                var a = -10;
+            } else if (three == 4) {
+                a = 39;
+            } else if (three == 6) {
+                a = 50;
+            } else if (three == -4) {
+                a = -400;
+            } else if (three == -2) {
+                a = -600;
+            } else if (three == -6) {
+                a = -200;
+            } else if (three == 0) {
+                a = amplitude;
+            }
+            var frequency = 14;
+            ctx.beginPath();
+            ctx.lineWidth = 3;
+            ctx.strokeStyle = "rgb(66,44,255)";
+
+            if (potentiomtr == 0) {
+                p = 0
+            }
+
+            if (fre == 0) {
+                b = -14;
+            } else if (fre == 0.5 && potentiomtr == 5) {
+                var b = 3.25;
+                var p = 5;
+            } else if (fre == 0.5 && potentiomtr == 10) {
+                var b = 2.2;
+                var p = 10;
+            } else if (fre == 0.5 && potentiomtr == 15) {
+                var b = 1.95;
+                var p = 15;
+            } else if (fre == 0.5 && potentiomtr == 20) {
+                var b = 1;
+                var p = 20;
+            } else if (fre == 1 && potentiomtr == 5) {
+                var b = -8.07;
+                var p = 5;
+            } else if (fre == 1 && potentiomtr == 10) {
+                var b = -11;
+                var p = 10;
+            } else if (fre == 1 && potentiomtr == 15) {
+                var b = -13.25;
+                var p = 15;
+            } else if (fre == 1 && potentiomtr == 20) {
+                var b = -16.5;
+                var p = 20;
+            } else if (fre == 1.5 && potentiomtr == 5) {
+                var b = -11.5;
+                var p = 5;
+            } else if (fre == 1.5 && potentiomtr == 10) {
+                var b = -15;
+                var p = 10;
+            } else if (fre == 1.5 && potentiomtr == 15) {
+                var b = -18.5;
+                var p = 15;
+            } else if (fre == 1.5 && potentiomtr == 20) {
+                var b = -22.5;
+                var p = 20;
+            } else if (fre == 2 && potentiomtr == 5) {
+                var b = -13.2;
+                var p = 5;
+            } else if (fre == 2 && potentiomtr == 10) {
+                var b = -17.6;
+                var p = 10;
+            } else if (fre == 2 && potentiomtr == 15) {
+                var b = -21.5;
+                var p = 15;
+            } else if (fre == 2 && potentiomtr == 20) {
+                var b = -25.5;
+                var p = 20;
+            } else if (fre == 2.5 && potentiomtr == 5) {
+                var b = -14.22;
+                var p = 5;
+            } else if (fre == 2.5 && potentiomtr == 10) {
+                var b = -18.5;
+                var p = 10;
+            } else if (fre == 2.5 && potentiomtr == 15) {
+                var b = -23;
+                var p = 15;
+            } else if (fre == 2.5 && potentiomtr == 20) {
+                var b = -27;
+                var p = 20;
+            }
+
+
+            var x = 0;
+            var y = 0;
+            var amplitude = 60;
+
+            if (fre == 0) {
+                while (x < 700) {
+                    //y = height/2 + amplitude * (Math.sin((x+xOffset)/frequency));
+                    y = height / 2.7 + (amplitude - amplitude) * Math.sign(Math.sin(x / (frequency + b + p)));
+
+                    ctx.lineTo(x + 4, y - two);
+                    x += 1;
+                }
+            }
+
+
+            if (fre != 0) {
+                while (x < 700) {
+                    //y = height/2 + amplitude * (Math.sin((x+xOffset)/frequency));
+                    y = height / 2.7 + (amplitude - a) * Math.sign(Math.sin(x / (frequency + b + p)));
+
+                    ctx.lineTo(x + 4 - pos, y - two);
+                    x += 1;
+                }
+            }
+
+            ctx.stroke();
+            ctx.save();
+
+            //    ctx.stroke();
+            ctx.restore();
+        }
+
+        function plotTri1(ctx, xOffset, yOffset) {
+            var two = document.getElementById("position-rotate").value;
+            var pos = document.getElementById('rotate').value;
+            var fre = document.getElementById("time").value;
+            var three = document.getElementById("ch2").value;
+            var width = ctx.canvas.width;
+            var height = ctx.canvas.height;
+            var potentiomtr = document.getElementById("ch3").value;
+
+
+            //   var scale = 10;
+            if (three == 2) {
+                var a = -10;
+            } else if (three == 4) {
+                a = 39;
+            } else if (three == 6) {
+                a = 50;
+            } else if (three == -4) {
+                a = -400;
+            } else if (three == -2) {
+                a = -600;
+            } else if (three == -6) {
+                a = -200;
+            } else if (three == 0) {
+                a = amplitude;
+            }
+            var frequency = 14;
+            ctx.beginPath();
+            ctx.lineWidth = 3;
+            ctx.strokeStyle = "rgb(66,44,255)";
+            if (potentiomtr == 0) {
+                p = 0
+            }
+
+            if (fre == 0) {
+                b = -14;
+            } else if (fre == 0.5 && potentiomtr == 5) {
+                var b = 3.25;
+                var p = 5;
+            } else if (fre == 0.5 && potentiomtr == 10) {
+                var b = 2.2;
+                var p = 10;
+            } else if (fre == 0.5 && potentiomtr == 15) {
+                var b = 1.95;
+                var p = 15;
+            } else if (fre == 0.5 && potentiomtr == 20) {
+                var b = 1;
+                var p = 20;
+            } else if (fre == 1 && potentiomtr == 5) {
+                var b = -8.07;
+                var p = 5;
+            } else if (fre == 1 && potentiomtr == 10) {
+                var b = -11;
+                var p = 10;
+            } else if (fre == 1 && potentiomtr == 15) {
+                var b = -13.25;
+                var p = 15;
+            } else if (fre == 1 && potentiomtr == 20) {
+                var b = -16.5;
+                var p = 20;
+            } else if (fre == 1.5 && potentiomtr == 5) {
+                var b = -11.5;
+                var p = 5;
+            } else if (fre == 1.5 && potentiomtr == 10) {
+                var b = -15;
+                var p = 10;
+            } else if (fre == 1.5 && potentiomtr == 15) {
+                var b = -18.5;
+                var p = 15;
+            } else if (fre == 1.5 && potentiomtr == 20) {
+                var b = -22.5;
+                var p = 20;
+            } else if (fre == 2 && potentiomtr == 5) {
+                var b = -13.2;
+                var p = 5;
+            } else if (fre == 2 && potentiomtr == 10) {
+                var b = -17.6;
+                var p = 10;
+            } else if (fre == 2 && potentiomtr == 15) {
+                var b = -21.5;
+                var p = 15;
+            } else if (fre == 2 && potentiomtr == 20) {
+                var b = -25.5;
+                var p = 20;
+            } else if (fre == 2.5 && potentiomtr == 5) {
+                var b = -14.22;
+                var p = 5;
+            } else if (fre == 2.5 && potentiomtr == 10) {
+                var b = -18.5;
+                var p = 10;
+            } else if (fre == 2.5 && potentiomtr == 15) {
+                var b = -23;
+                var p = 15;
+            } else if (fre == 2.5 && potentiomtr == 20) {
+                var b = -27;
+                var p = 20;
+            }
+            var x = 0;
+            var y = 0;
+            var amplitude = 60;
+
+            if (fre == 0 || p == 0) {
+                while (x < 700) {
+                    //y = height/2 + amplitude * (Math.sin((x+xOffset)/frequency));
+                    y = height / 2.7 + (amplitude - amplitude) * Math.sign(Math.sin(x / (frequency + b + p)));
+
+                    ctx.lineTo(x + 4, y - two);
+                    x += 1;
+
+
+                }
+            }
+            if (fre != 0) {
+                while (x < 700) {
+                    //y = height/2 + amplitude * (Math.sin((x+xOffset)/frequency));
+                    y = height / 2.7 + (amplitude - a) * Math.sign(Math.sin(x / (frequency + b + p)));
+
+                    ctx.lineTo(x + 4 - pos, y - two);
+                    x += 1;
+
+
+                }
+            }
+
+            ctx.stroke();
+            ctx.save();
+
+            //    ctx.stroke();
+            ctx.restore();
+        }
+
+        function draw1() {
+            var canvas = document.getElementById("canvas");
+            var context = canvas.getContext("2d");
+
+            context.clearRect(0, 0, 600, 1000);
+            //showAxes(context);
+            context.save();
+
+            plotSquare1(context, step, 20);
+            context.restore();
+
+
+            window.requestAnimationFrame(draw1);
+        }
+
+        function spirograph1() {
+            var canvas2 = document.getElementById("canvas");
+            var context = canvas2.getContext("2d");
+
+            context.clearRect(0, 0, 600, 1000);
+            context.save();
+
+            plotTri1(context, step, 10);
+            context.restore();
+
+
+            window.requestAnimationFrame(spirograph1);
+
+        }
+
+        function init1() {
+            channel = document.getElementById('channel').value;
+            if (channel == "a") {
+                window.requestAnimationFrame(draw1);
+            }
+            if (channel == "b") {
+                window.requestAnimationFrame(spirograph1);
+            }
+        }
+
+        function stop() {
+
+            init1();
+        }
+    </script>
+
+    <script type="text/javascript">
+        for (var i = 1; i < 3; i++) {
+            Array.prototype.slice.call(document.getElementsByClassName('preset' + i)).forEach(function(el) {
+                new Knob1(el, new Ui['P' + i]());
+                el.addEventListener('change', function() {
+                    console.log(el.value)
+                })
+            })
+        }
+
+
+        var Arcxample = function() {};
+
+        Arcxample.prototype = Object.create(Ui.prototype);
+
+        Arcxample.prototype.createElement = function() {
+
+            Ui.prototype.createElement.apply(this, arguments);
+            this.addComponent(new Ui.Arc({
+                arcWidth: this.width / 10
+            }));
+            this.el.node.setAttribute("class", "arcExample");
+        };
+        new Knob1(document.getElementsByClassName('arcExample')[0], new Arcxample());
+    </script>
+    <script type="text/javascript">
+        var createKnobCSS = function(knob, id) {
+            var $input = $(knob.element),
+                $container = $('<div class="container ' + id + '">'),
+
+                $body = $('<div class="ui-knob  ' + id + '">'),
+                $indicator = $('<div class="ui-indicator ' + id + '">');
+
+            $container.append($body);
+            $container.append($indicator);
+
+            // $input.hide();
+            $container.insertBefore($input);
+            $container.append($input);
+
+            $body.css({
+                "margin-top": -($body.outerHeight() / 2),
+                "margin-left": -($body.outerWidth() / 2)
+            });
+
+            setupKnob(knob, $container[0]);
+
+        }
+
+
+        var drawKnobCSS = function(knob, indicator) {
+            var $indicator = $(knob.element).siblings('.ui-indicator');
+            $indicator.css({
+                left: indicator.x - $indicator.outerWidth() / 2,
+                top: indicator.y - $indicator.outerHeight() / 2
+            });
+
+
+        }
+        var positionRotateKnob = new Knob(document.getElementById('position-rotate'),
+            function(knob, indicator) {
+                drawKnobCSS(knob, indicator);
+            }
+        );
+        createKnobCSS(positionRotateKnob, 'position-rotate');
+    </script>
+    <script type="text/javascript">
+        var createKnobCSS = function(knob, id) {
+            var $input = $(knob.element),
+                $container1 = $('<div class="container1 ' + id + '">'),
+
+                $body = $('<div class="ui-knob  ' + id + '">'),
+                $indicator = $('<div class="ui-indicator ' + id + '">');
+
+            $container1.append($body);
+            $container1.append($indicator);
+
+            // $input.hide();
+            $container1.insertBefore($input);
+            $container1.append($input);
+
+            $body.css({
+                "margin-top": -($body.outerHeight() / 2),
+                "margin-left": -($body.outerWidth() / 2)
+            });
+
+            setupKnob(knob, $container1[0]);
+
+        }
+
+
+        var drawKnobCSS = function(knob, indicator) {
+            var $indicator = $(knob.element).siblings('.ui-indicator');
+            $indicator.css({
+                left: indicator.x - $indicator.outerWidth() / 2,
+                top: indicator.y - $indicator.outerHeight() / 2
+            });
+
+
+        }
+
+        var rotateKnob = new Knob(document.getElementById('rotate'),
+            function(knob, indicator) {
+                drawKnobCSS(knob, indicator);
+            }
+        );
+        createKnobCSS(rotateKnob, 'rotate');
+    </script>
+
+    <!--CRO Codes end-->
+
+    <script src="js/right_components.js"></script>
+
+</body>
+
+</html>

@@ -1,1 +1,1 @@
-## Astable and monostable multivibrator using IC 555.
+##  To design astable multivibrator using 555 timer IC.
