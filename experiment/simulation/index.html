@@ -225,8 +225,8 @@
 
             <div class="bottom">
                 <div>
-                    <button id="check" onclick="checkCircuit()">Check Connection</button>
-                    <button id="reset" onclick="reload()">Reset</button>
+                    <button id="check" onclick="checkCircuit()" disabled>Check Connection</button>
+                    <button id="reset" onclick="reload()" disabled>Reset</button>
                 </div>
             </div>
         </div>
@@ -238,14 +238,15 @@
                         <button class="close-btn" id="close-btn"><span>&#10005</span></button>
                     </div>
                     <ol type="1" style="padding-left: 20px;padding-top:0px;text-align: left;">
+                        <li>Click on the components button to place the component.</li>
                         <li>Make connections as per the circuit diagram and pin diagram.</li>
                         <figure>
                             <img src="./images/image001.png" style="height: 160px; margin-left: 110px;">
-                            <figcaption style="text-align: center;">Fig. Circuit diagram of astable multivibrator</figcaption>
+                            <figcaption style="text-align: center;">Fig. 1 Circuit diagram of astable multivibrator</figcaption>
                           </figure>
                           <figure>
                             <img src="./images/image002.gif" style="height: 130px; margin-left: 100px;">
-                            <figcaption style="text-align: center;">Fig. Pin diagram of IC 555</figcaption>
+                            <figcaption style="text-align: center;">Fig. 2 Pin diagram of IC 555</figcaption>
                           </figure>
                         <li>Click on Check Connections button. If connections are right, click on ‘OK’, then Simulation will become active.</li>
                         <li>Set R1= 5 kΩ by using potentiometer knob.</li>
@@ -273,20 +274,20 @@
                 <button class="right_btn" id="second">Components</button>
 
                 <div>
-                    <button onclick="breadboard()">Breadboard</button>
-                    <button onclick="supply()">Supply</button>
+                    <button class="cmpbutton" id="breadbutton" onclick="breadboard()">Breadboard</button>
+                    <button class="cmpbutton" id="supplybutton" onclick="supply()">Supply</button>
                 </div>
                 <div>
-                    <button onclick="ic()">555 Timer IC</button>
-                    <button onclick="c1()">10nF Capacitor</button>
+                    <button class="cmpbutton" id="icbutton" onclick="ic()">555 Timer IC</button>
+                    <button class="cmpbutton" id="c1button" onclick="c1()">10nF Capacitor</button>
                 </div>
                 <div>
-                    <button onclick="r1()">10K&#8486; Resistor</button>
-                    <button onclick="c2()">100nF Capacitor</button>
+                    <button class="cmpbutton" id="r1button" onclick="r1()">10K&#8486; Resistor</button>
+                    <button class="cmpbutton" id="c2button" onclick="c2()">100nF Capacitor</button>
                 </div>
                 <div>
-                    <button onclick="ptm()">Potentiometer</button>
-                    <button onclick="cro()">CRO</button>
+                    <button class="cmpbutton" id="ptmbutton" onclick="ptm()">Potentiometer</button>
+                    <button class="cmpbutton" id="crobutton" onclick="cro()">CRO</button>
                 </div>
                 <div>
 

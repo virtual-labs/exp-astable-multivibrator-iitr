@@ -98,6 +98,8 @@ function BoardController() {
 var con ;
 
 function checkCircuit() {
+
+
     con = false;
     var g = new Graph(29);
 
@@ -106,14 +108,25 @@ function checkCircuit() {
 
     console.log(groups.length)
 
+   
+
     for (var i = 0; i < groups.length; i++) { //inserting groups vertexes
         g.addVertex(groups[i]);
     }
 
+   
     for (key in connections) { // adding edges
         g.addEdge(connections[key].endpoints[0].getParameter('groupName'), connections[key].endpoints[1].getParameter('groupName'));
     }
 
+    var edges= (g.numberofedges);
+    console.log('edges:'+edges)
+    if(edges == 0)
+    {
+        alert("No connections present.");   
+        return;
+    }
+    
     if (
                g.isConnected("ic_VCC","VCC") 
                && g.isConnected("ic_GND","GND") 
@@ -161,6 +174,8 @@ function checkCircuit() {
     } else {
         alert("Wrong Connections")
     }
+
+   
     console.log("executed")
 }
 
