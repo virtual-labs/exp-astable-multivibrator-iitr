@@ -1,7 +1,7 @@
 ### Introduction
 <div style="text-align:justify">
 
-A multivibrator circuit is basically a non-sinusoidal oscillator with a regenerative feedback. It is a two state circuit that has zero, one or two stable output states. Depending on the number of stable output states there are three basic types of multivibrator circuits namely monostable multivibrato (having one stable state), bistable multivibrator (having two stable states) and astable multivibrator (having no stable states).  
+A multivibrator circuit is basically a non-sinusoidal oscillator with a regenerative feedback. It is a two state circuit that has zero, one or two stable output states. Depending on the number of stable output states there are three basic types of multivibrator circuits namely monostable multivibrator (having one stable state), bistable multivibrator (having two stable states) and astable multivibrator (having no stable states).  
 Astable multivibrator continuously switches between two states without application of any external trigger hence is also called "Free Running Multivibrator". The 555 Timer IC can be made to work as an astable multivibrator with the addition of three external components- two resistors (R<sub>1</sub> and R<sub>2</sub>) and a capacitor (C).
 
 ### **555 Timer IC**
@@ -81,7 +81,7 @@ As shown in the fig. 4, the capacitor is periodically charged and discharged bet
 
 T<sub>c</sub> = 0.69(R<sub>1</sub> + R<sub>2</sub>)C ………………..(a) </center>
 
-where R<sub>1</sub> and R<sub>2</sub> are in ohms(Ω) and C is in Farad(F). Similarly, the time during which the capacitor discharges from 2/3 V<sub>cc</sub> to 1/3 V<sub>cc</sub> is equal to the time the output is low and is given by-  
+where R<sub>1</sub> and R<sub>2</sub> are in ohms (Ω) and C is in Farad (F). Similarly, the time during which the capacitor discharges from 2/3 V<sub>cc</sub> to 1/3 V<sub>cc</sub> is equal to the time the output is low and is given by-  
 <center>
 
 T<sub>d</sub> = 0.69(R<sub>1</sub>)C ……………………..(b) </center>
@@ -100,7 +100,7 @@ F = 1/T = 1.44/(R<sub>1</sub> + 2R<sub>2</sub>)C …………………………�
 ### **Duty Cycle**
 
 The charging and discharging time constants depends on the values of the resistors R<sub>1</sub> and R<sub>2</sub>. Generally, the charging time constant is more than the discharging time constant. Hence the HIGH output remains longer than the LOW output and therefore the output waveform is not symmetric. Duty cycle is the mathematical parameter that forms a relation between the high output and the low output.  
-Duty Cycle is defined as the ratio of the time T<sub>c</sub> during which the output is high to the total time period, T. It is generally expressed as percentage.Thus duty cycle in terms of percentage is given as  
+Duty Cycle is defined as the ratio of the time T<sub>c</sub> during which the output is high to the total time period, T. It is generally expressed as percentage. Thus duty cycle in terms of percentage is given as  
 <center>
 
 DC (%) = (T<sub>c</sub> × 100)/T = \[(R<sub>1</sub> + R<sub>2</sub>)/(R<sub>1</sub> + 2R<sub>2</sub>)\]× 100……………………….(e) </center>
