@@ -7,4 +7,4 @@
 {"question":"Name the multivibrator that is most commonly used as relaxation oscillator.","answers":{"a":"Bistable multivibrator","b":"Astable multivibrator","c":"Monostable multivibrator","d":"None of the above"},"correctAnswer":"b"},
 {"question":"An integrated circuit which is used in a variety of timer, pulse generation and oscillator applications is","answers":{"a":"555 timer","b":"7806IC","c":"7909IC","d":"225IC"},"correctAnswer":"a"},
 {"question":"Free running frequency of Astable multivibrator is","image":"<img src='images/pretestques9.png'/>","answers":{"a":"f = 1.45/(R\u2081+2R\u2082)C","b":"f = 1.45(R\u2081+2R\u2082)C","c":"f = 1.45C/(R\u2081+2R\u2082)","d":"f = 1.45R\u2081/(R\u2081+R\u2082)"},"correctAnswer":"a"},
-{"question":"In an astable multivibrator using 555 Timer IC the capacitor always charges between","answers":{"a":"0 and Vcc","b":"0 and 2/3 Vcc","c":"1/3 Vcc and 2/3 Vcc","d":"None"},"correctAnswer":"c"}]
+{"question":"In an astable multivibrator using 555 Timer IC the capacitor always charges between","answers":{"a":"0 and Vcc","b":"0 and 2/3 Vcc","c":"1/3 Vcc and 2/3 Vcc","d":"None of the above"},"correctAnswer":"c"}]
