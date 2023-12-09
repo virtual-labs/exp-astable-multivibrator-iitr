@@ -22,10 +22,10 @@ D  Active ratio
   
 Q3. An astable multivibrator requires
 
-A  Balanced time constants.  
-B  A pair of matched transistors.  
-<b>C  No input signal.</b>  
-D  Dual J-K flip-flops.  
+A  Balanced time constants
+B  A pair of matched transistors  
+<b>C  No input signal</b>  
+D  Dual J-K flip-flops 
 <br>
   
   
