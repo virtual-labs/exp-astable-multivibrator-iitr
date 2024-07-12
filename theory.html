@@ -1,0 +1,510 @@
+<!DOCTYPE html><html lang="en"><head>
+      <!--Google Tag Manager-->
+      <script class="gtm">
+        var dataLayer = [{
+        'labName': 'Virtual Lab',
+        'discipline': 'Test',
+        'college': 'IITR',
+        'phase': 'Testing',
+        'expName': 'TO DESIGN ASTABLE MULTIVIBRATOR USING 555 TIMER IC.',
+        'expShortName': 'astable-multivibrator'
+        }];
+    
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5NMQ9NQ');
+      </script>
+      <!--End Google Tag Manager-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    
+    	<meta name="experiment-short-name" content="astable-multivibrator">
+    	<meta name="developer-institute" content="IITR">
+    	<meta name="learning-unit" content="TO DESIGN ASTABLE MULTIVIBRATOR USING 555 TIMER IC.">
+    	<meta name="task-name" content="Theory">
+    
+    <!-- For iPhone -->
+    <meta name="msapplication-TileColor" content="#4076e0">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#4076e0">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#4076e0">
+    <title>Virtual Labs</title>
+    <link rel="shortcut icon" href="./assets/images/favicon.ico">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css" integrity="sha512-Oy18vBnbSJkXTndr2n6lDMO5NN31UljR8e/ICzVPrGpSud4Gkckb8yUpqhKuUNoE+o9gAb4O/rAxxw1ojyUVzg==" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Raleway&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/github-markdown.min.css">
+    <link rel="stylesheet" href="./assets/css/vlabs-style.css">
+    <link rel="stylesheet" href="./assets/katex_assets/katex.min.css">
+    
+    <script src="./assets/js/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+      h1 {
+      font-size: 1.8rem;
+      }
+      h2 {
+      font-size: 1.4rem;
+      }
+      h3 {
+      font-size: 1.2rem;
+      }
+
+      h2, h3 {
+      font-weight: 800;
+      }
+    </style>
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"></head>
+  <body class="p-0 container-fluid vlabs-page d-flex flex-column justify-content-between">
+      <!--Google Tag Manager (noscript)-->
+      <noscript class="gtm">
+        <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-5NMQ9NQ" style="display:none;visibility:hidden" width="0">
+        </iframe>
+      </noscript>
+      <!--End Google Tag Manager (noscript)-->
+  
+      <header class="vlabs-header sticky-top bg-white">
+        <nav class="p-0 navbar navbar-light d-flex align-items-stretch">
+          
+          <button class="navbar-toggler px-4" type="button" onclick="toggle()">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="d-flex justify-content-center">        
+            <a href="https://vlab.co.in" class="navbar-brand">
+              <img src="./assets/images/vlabs-color-small-moe.jpg" alt="vlabs logo" class="vlabs-logo">
+            </a>
+          </div>
+          
+          <div id="headerNavbar" class="d-none border-top flex-grow-1 d-lg-flex align-items-center justify-content-end">
+            <div class="svc-rating-display">
+                <rating-display spreadsheetid="1x12nhpp0QvnsA6x-O1sV4IA9SAbfVsq_wiexWkutOmU" sheetname="Experiment-Database" columnname="Experiment Short Name" columnvalue="astable-multivibrator" imagesdirectory="./plugins/svc-rating/images/">
+                </rating-display>
+            </div>      <div class="svc-rating-submit">
+                <rating-submit title="Rate" this="" experiment="">
+                </rating-submit>
+            </div>      <bug-report id="bug-report" title="[BUG REPORT] TO DESIGN ASTABLE MULTIVIBRATOR USING 555 TIMER IC." page-type="text" context-info="{&quot;organisation&quot;:&quot;Virtual Labs&quot;,&quot;developer_institute&quot;:&quot;IITR&quot;,&quot;expname&quot;:&quot;TO DESIGN ASTABLE MULTIVIBRATOR USING 555 TIMER IC.&quot;,&quot;labname&quot;:&quot;Virtual Lab&quot;,&quot;phase&quot;:&quot;Testing&quot;}" checkbox-json="{&quot;text&quot;:[&quot;Insufficient Content&quot;],&quot;video&quot;:[&quot;Insufficient Content&quot;],&quot;assesment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;assessment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;simulation&quot;:[&quot;Simulation Not Working&quot;,&quot;Incorrect Results/Observations&quot;,&quot;Insufficient/Incorrect Instructions&quot;],&quot;DEFAULT&quot;:[&quot;Page Not Loading&quot;,&quot;Content Not Visible&quot;,&quot;Incorrect Content&quot;]}" button_style="border: none; color: #fff; background-color: #288ec8; text-align: center; font-size: 1.05rem; border-radius: 1em;padding: 0.6em 1.2em; margin: 0 10px" position="override" custom_button_class="v-button"></bug-report>
+          </div>
+        </nav>
+      </header>
+      <div class="container-fluid flex-fill d-flex flex-column vlabs-page-main">
+        <div class="row d-flex justify-content-between">
+          <div class="flex-column">
+          <div class="row py-4 px-4 breadcrumbs">
+          	<div class="title is-4 tools">Tools</div>
+          	<span class="mx-2">
+          		<i aria-hidden="true" class="fa fa-angle-right"></i>
+          	</span>
+          	<a href="performance-report.html" class="my-2 mx-3" target="_blank">
+          		<button class="v-button">Performance Tool</button>
+          	</a>
+          	<a href="validator-report.html" class="my-2 mx-3" target="_blank">
+          		<button class="v-button">Validation Tool</button>
+          	</a>
+          </div>
+          </div>
+        </div>
+        <div class="row flex-grow-1 d-flex flex-nowrap flex-column flex-lg-row">
+          <div class="modal fade popupmenu" id="popupMenu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">
+                              <a href="https://vlab.co.in" class="navbar-brand">
+                                  <img src="./assets/images/vlabs-color-small-moe.jpg" alt="vlabs logo" class="vlabs-logo">
+                              </a>
+                          </h5>
+                          <button type="button" class="btn-close align-self-center" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body nav-menu">
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="index.html" class="p-2 ">
+                                      Aim
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="theory.html" class="p-2  current-item ">
+                                      Theory
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="pretest.html" class="p-2 ">
+                                      Pretest
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="procedure.html" class="p-2 ">
+                                      Procedure
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="simulation.html" class="p-2 ">
+                                      Simulation
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="posttest.html" class="p-2 ">
+                                      Posttest
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="references.html" class="p-2 ">
+                                      References
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="contributors.html" class="p-2 ">
+                                      Contributors
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="feedback.html" class="p-2 ">
+                                      Feedback
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="nav flex-column sidebar nav-menu flex-shrink-0 px-lg-4 align-items-center align-items-lg-start hidden d-none d-lg-flex" id="menu">
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="index.html" class="p-2 ">
+                        Aim
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="theory.html" class="p-2  current-item ">
+                        Theory
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="pretest.html" class="p-2 ">
+                        Pretest
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="procedure.html" class="p-2 ">
+                        Procedure
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="simulation.html" class="p-2 ">
+                        Simulation
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="posttest.html" class="p-2 ">
+                        Posttest
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="references.html" class="p-2 ">
+                        References
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="contributors.html" class="p-2 ">
+                        Contributors
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="feedback.html" class="p-2 ">
+                        Feedback
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+          </div>          <div class="vlabs-page-content px-5 pb-4 flex-grow-1 markdown-body">
+            <div class="text-center fix-spacing">
+              <h2 id="to-design-astable-multivibrator-using-555-timer-ic">To design astable multivibrator using 555 timer IC.</h2>
+          
+            </div>
+              <h3 id="introduction">Introduction</h3>
+          <div style="text-align:justify">
+          
+          <p>A multivibrator circuit is basically a non-sinusoidal oscillator with a regenerative feedback. It is a two state circuit that has zero, one or two stable output states. Depending on the number of stable output states there are three basic types of multivibrator circuits namely monostable multivibrator (having one stable state), bistable multivibrator (having two stable states) and astable multivibrator (having no stable states).<br>Astable multivibrator continuously switches between two states without application of any external trigger hence is also called "Free Running Multivibrator". The 555 Timer IC can be made to work as an astable multivibrator with the addition of three external components- two resistors (R<sub>1</sub> and R<sub>2</sub>) and a capacitor (C).</p>
+          <h3 id="555-timer-ic"><strong>555 Timer IC</strong></h3>
+          <p>555 Timer IC is the most commonly used IC for timing and pulse generation applications. It can adopt itself into various applications due to its different operating modes. This IC consists of 25 transistors, 2 diodes and 15 resistors. When compared to the applications of an op-amp in the same areas, the 555 Timer IC is equally reliable and is cheap in cost. There are three resistors of value 5 KΩ, which gives this IC its iconic name “555 Timer”. It has dual comparators and flip-flop which make this IC operated in three different modes viz. astable, monostable and bistable (Schmitt) mode. Apart from its applications as a multivibrators, a 555 Timer IC can also be used in digital logic probes, waveform generators, analog frequency meters and tachometers, temperature measurement and control devices, voltage regulators, etc.</p>
+          <h4 id="important-features-of-555-timer-ic"><strong>Important features of 555 Timer IC</strong></h4>
+          <ul>
+          <li>  The duty cycle of the 555 Timer IC is adjustable.</li>
+          <li>  Sinking or sourcing 200 mA of load current.</li>
+          <li>  It operates from a wide range of power supplies ranging from +5 V to +18 V.</li>
+          <li>  The external components should be selected properly so that the timing intervals can be made into several minutes along with the frequencies exceding several hundred kilohertz.</li>
+          <li>  The output of a 555 Timer IC can drive transistor-transistor logic (TTL) due to its high current output.</li>
+          <li>  It has a temperature stability of 50 parts per million (ppm) per degree Celsius change in temperature or equivalently 0.005 %/ °C.</li>
+          <li>  The maximum power dissipation per package is 600 mW and its trigger and reset inputs have logic compatibility.</li>
+          </ul>
+          <h4 id="pin-configuration-of-555-timer-ic"><strong>PIN CONFIGURATION OF 555 TIMER IC</strong></h4>
+          <p>The pin diagram of 555 timer IC is shown in fig. 1 </p>
+          <center>
+          
+          <p><img src="images/1.jpg" alt="fig.1"></p>
+          <p><strong>Fig. 1 Pin diagram of 555 Timer IC</strong> </p></center><p></p>
+          <ol>
+          <li> <strong>Pin 1: Ground Terminal-</strong> All the voltages are measured with respect to the Ground terminal.</li>
+          <li> <strong>Pin 2: Trigger Terminal-</strong> The trigger pin is used to feed the trigger input hence the 555 Timer IC is set up as a monostable multivibrator. This pin is an inverting input of a comparator and is responsible for the transition of flip-flop from set to reset. The output of the timer depends on the amplitude of the external trigger pulse applied to this pin. A negative pulse with a DC level greater than V<sub>cc</sub>/3 is applied to this terminal. In the negative edge, as the trigger passes through V<sub>cc</sub>/3, the output of the lower comparator becomes high and the complimentary of Q becomes zero. Thus the 555 Timer IC's output gets a high voltage and thus a quasi stable state.</li>
+          <li> <strong>Pin 3: Output Terminal-</strong> Output of the timer is available at this pin. There are two ways in which a load can be connected to the output terminal. One way is to connect between output pin (Pin 3) and ground pin (Pin 1). Another way is to connect between Pin 3 and supply pin (Pin 8). The load connected between output and ground supply pin is called the "normally on load" and that connected between output and ground pin is called the "normally off load".</li>
+          <li> <strong>Pin 4: Reset Terminal-</strong> Whenever the timer IC is to be reset or disabled, a negative pulse is applied to Pin 4 and thus is named as reset terminal. The output is reset irrespective of the input condition. When this pin is not to be used for reset purpose, it should be connected to +V<sub>cc</sub> to avoid any possibility of false triggering.</li>
+          <li> <strong>Pin 5: Control Voltage Terminal-</strong> The threshold and trigger levels are controlled using this pin. The pulse width of the output waveform is determined by connecting a potentiometer or bringing in an external voltage to this pin. The external voltage applied to this pin can also be used to modulate the output waveform. Thus, the amount of voltage applied to this terminal will decide when the comparator is to be switched and thus changes the pulse width of the output. When this pin is not used, it should be bypassed to ground through a 0.01 μF capacitor to avoid any noise problem.</li>
+          <li> <strong>Pin 6: Threshold Terminal-</strong> This is the non-inverting input terminal of comparator 1, which compares the voltage applied to the terminal with a reference voltage of 2/3 V<sub>cc</sub>. The amplitude of voltage applied to this terminal is responsible for the set state of flip-flop. When the voltage applied in this terminal is greater than 2/3 V<sub>cc</sub>, the upper comparator switches to +V sat and the output gets reset.</li>
+          <li> <strong>Pin 7: Discharge Terminal-</strong> This pin is connected internally to the collector of transistor and mostly a capacitor is connected between this terminal and ground. It is called discharge terminal because when transistor saturates, capacitor discharges through the transistor. When the transistor is in cut-off region, the capacitor charges at a rate determined by the external resistor and capacitor.</li>
+          <li> <strong>Pin 8: Supply Terminal-</strong> A supply voltage of +5 V to +18 V is applied to this terminal with respect to ground (Pin 1).</li>
+          </ol>
+          <h3 id="circuit-and-its-operation"><strong>Circuit and its operation</strong></h3>
+          <p>The schematic of the 555 Timer IC as an astable multivibrator along with the three external components R<sub>1</sub>, R<sub>2</sub> and C is shown in fig 2. This circuit is not stable in any state and switches outputs after predetermined time periods. The result of this is that the output is a continuous square/rectangular wave with properties depending on values of external resistors and capacitors.  </p>
+          <center>
+          
+          <p><img src="images/2.2.jpg" alt="fig.2">  </p>
+          <p><strong>Fig. 2 Circuit diagram of an astable multivibrator</strong> </p></center><p></p>
+          <p>Pins 2 and 6 are connected and hence there is no need for an external trigger pulse. The rest of the connections are as follows :-<br>Pin 8 is connected to supply voltage (V<sub>cc</sub>).<br>Pin 3 is the output terminal and hence the output is available at this pin.<br>Pin 4 is the external reset pin. A momentary low on this pin will reset the timer. Hence when not in use, Pin 4 is usually tied to V<sub>cc</sub>.<br>The control voltage applied at Pin 5 will change the threshold voltage level. But for normal use, Pin 5 is connected to ground via a capacitor (usually 0.01µF), so the external noise from the terminal is filtered out.<br>Pin 1 is ground terminal.<br>The timing circuit that determines the width of the output pulse is made up of R<sub>1</sub>, R<sub>2</sub> and C.<br>The following schematic (fig. 3) depicts the internal circuit of the 555 Timer IC operating in astable mode. The RC timing circuit incorporates R<sub>1</sub>, R<sub>2</sub> and C.</p>
+          <center>
+            
+          <p><img src="images/3.png" alt="fig.3">  </p>
+          <p><strong>Fig. 3 Internal circuit of the 555 timer IC operating in astable mode</strong> </p></center><p></p>
+          <p>Initially on power up the flip-flop is RESET (and hence the output of the timer is low). As a result, the discharge transistor is driven to saturation (as it is connected to Q'). The capacitor(C) of the timing circuit is connected at Pin 7 of the 555 Timer IC and will discharge through the transistor. The output of the timer at this point is low. The voltage across the capacitor is nothing but the trigger voltage. So while discharging, if the capacitor voltage becomes less than 1/3 V<sub>cc</sub>, which is the reference voltage to trigger comparator (comparator 2), the output of the comparator 2 will become high. This will SET the flip-flop and hence the output of the timer at Pin 3 goes to HIGH.<br>This high output will turn OFF the transistor. As a result, the capacitor(C) starts charging through the resistors R<sub>1</sub> and R<sub>2</sub>. Now the capacitor voltage is same as the threshold voltage (as pin 6 is connected to the capacitor-resistor junction). While charging, the capacitor voltage increases exponentially towards V<sub>cc</sub> and the moment it crosses 2/3rd V<sub>cc</sub>, which is the reference voltage to threshold comparator (comparator 1), its output becomes high.<br>As a result, the flip-flop is RESET. The output of the timer falls to LOW. This low output will once again turn on the transistor which provides a discharge path to the capacitor. Hence the capacitor(C) will discharge through the resistor R<sub>2</sub>. And hence the cycle continues.<br>Thus when the capacitor is charging, the voltage across the capacitor rises exponentially and the output voltage at Pin 3 is high. Similarly, when the capacitor is discharging, the voltage across the capacitor falls exponentially and the output voltage at Pin 3 is low. The shape of the output waveform is a train of rectangular pulses. The waveforms of capacitor voltage and the output in the astable mode are shown in fig. 4 as below.  </p>
+          <center>
+          
+          <p><img src="images/4.png" alt="fig.4"></p>
+          <p><strong>Fig. 4 Waveforms of capacitor voltage and the output in the astable mode</strong> </p></center><p></p>
+          <p>While charging, the capacitor charges through the resistors R<sub>1</sub> and R<sub>2</sub>. Therefore the charging time constant is (R<sub>1</sub> + R<sub>2</sub>)*C as the total resistance in the charging path is (R<sub>1</sub> + R<sub>2</sub>). While discharging, the capacitor discharges through the resistor R<sub>2</sub> only. Hence the discharge time constant is R<sub>2</sub>C.<br>As shown in the fig. 4, the capacitor is periodically charged and discharged between 2/3 V<sub>cc</sub> and 1/3 V<sub>cc</sub> respectively. The time during which the capacitor charge from 1/3 V<sub>cc</sub> to 2/3 V<sub>cc</sub> is equal to the time the output is high and is given by-  </p>
+          <center>
+          
+          <p>T<sub>c</sub> = 0.69(R<sub>1</sub> + R<sub>2</sub>)C ………………..(a) </p></center><p></p>
+          <p>where R<sub>1</sub> and R<sub>2</sub> are in ohms (Ω) and C is in Farad (F). Similarly, the time during which the capacitor discharges from 2/3 V<sub>cc</sub> to 1/3 V<sub>cc</sub> is equal to the time the output is low and is given by-  </p>
+          <center>
+          
+          <p>T<sub>d</sub> = 0.69(R<sub>1</sub>)C ……………………..(b) </p></center><p></p>
+          <p>Thus the total period of output waveform is-  </p>
+          <center>
+          
+          <p>T = T<sub>c</sub> + T<sub>d</sub><br>T = 0.69(R<sub>1</sub> + 2R<sub>2</sub>)C………….(c) </p></center><p></p>
+          <p>Thus frequency of Oscillation is given by-  </p>
+          <center>
+          
+          <p>F = 1/T = 1.44/(R<sub>1</sub> + 2R<sub>2</sub>)C ……………………………..(d) </p></center><p></p>
+          <h3 id="duty-cycle"><strong>Duty Cycle</strong></h3>
+          <p>The charging and discharging time constants depends on the values of the resistors R<sub>1</sub> and R<sub>2</sub>. Generally, the charging time constant is more than the discharging time constant. Hence the HIGH output remains longer than the LOW output and therefore the output waveform is not symmetric. Duty cycle is the mathematical parameter that forms a relation between the high output and the low output.<br>Duty Cycle is defined as the ratio of the time T<sub>c</sub> during which the output is high to the total time period, T. It is generally expressed as percentage. Thus duty cycle in terms of percentage is given as  </p>
+          <center>
+          
+          <p>DC (%) = (T<sub>c</sub> × 100)/T = [(R<sub>1</sub> + R<sub>2</sub>)/(R<sub>1</sub> + 2R<sub>2</sub>)]× 100……………………….(e) </p></center><p></p>
+          <h3 id="applications-of-astable-multivibrator"><strong>Applications of Astable Multivibrator</strong></h3>
+          <h4 id="square-wave-generation"><strong>Square Wave Generation</strong></h4>
+          <p>The duty cycle of an astable multivibrator is always greater than 50 %. A square wave is obtained as the output of an astable multivibrator when the duty cycle is exactly 50 %. Duty cycle of anything less than that of 50 % is not possible with the 555 Timer IC as an astable multivibrator mentioned above.</p>
+          <h4 id="pulse-position-modulation"><strong>Pulse Position Modulation</strong></h4>
+          <p>In pulse position modulation, the position of the pulse varies according to the modulating signal while the amplitude and the width of the pulse are kept constant. The position of the each pulse changes according to the instantaneous samples voltage of the modulating signal. In order to achieve Pulse Position Modulation, two 555 timer IC’s are used in which one operates in astable mode and the other in monostable mode.</p>
+          <h4 id="pulse-train"><strong>Pulse Train</strong></h4>
+          <p>We know that astable multivibrator will generate continuous stream of pulses. By using a potentiometer in place of R<sub>1</sub>, a train of pulses can be generated different widths.</p>
+          <h4 id="frequency-modulation"><strong>Frequency Modulation</strong></h4>
+          <p>Astable multivibrator can be used to generate frequency modulated signals. A modulating signal is given to the Pin 5 (control voltage). A diode is connected in parallel to the resistor R<sub>2</sub> in order to generate a pulse output with duty cycle ≈ 50%. The modulation signal is applied at Pin 5 through a high pass filter consisting of a capacitor and a resistor. According to the modulating signal applied at Pin 5, the output will be frequency modulated. If the voltage of the modulating signal is high, the time period of the output signal is high and if the voltage of the modulating signal is low, the time period is low. The waveforms of the modulation signal and the frequency modulated signal are shown in fig. 5 as below.</p>
+          <center>
+          
+          <p><img src="images/5.png" alt="fig. 5">  </p>
+          <p><strong>Fig. 5 Waveforms of the modulation signal and the frequency modulated signal</strong> </p></center><p></p>
+          </div>
+          
+          </div>
+          <div class="bug-report-mobile">
+              <bug-report id="bug-report" title="[BUG REPORT] TO DESIGN ASTABLE MULTIVIBRATOR USING 555 TIMER IC." page-type="text" context-info="{&quot;organisation&quot;:&quot;Virtual Labs&quot;,&quot;developer_institute&quot;:&quot;IITR&quot;,&quot;expname&quot;:&quot;TO DESIGN ASTABLE MULTIVIBRATOR USING 555 TIMER IC.&quot;,&quot;labname&quot;:&quot;Virtual Lab&quot;,&quot;phase&quot;:&quot;Testing&quot;}" checkbox-json="{&quot;text&quot;:[&quot;Insufficient Content&quot;],&quot;video&quot;:[&quot;Insufficient Content&quot;],&quot;assesment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;assessment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;simulation&quot;:[&quot;Simulation Not Working&quot;,&quot;Incorrect Results/Observations&quot;,&quot;Insufficient/Incorrect Instructions&quot;],&quot;DEFAULT&quot;:[&quot;Page Not Loading&quot;,&quot;Content Not Visible&quot;,&quot;Incorrect Content&quot;]}" position="override" button_style="
+                          position: fixed; 
+                          bottom: 20px;
+                          right: 20px;
+                          z-index: 1;
+                          font-size: 0;
+                          padding: 25px;
+                          border-radius: 50%;
+                          border: none;
+                          background-color: #0fc0ff;
+                          background-image: url(data:image/png;base64,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);
+                          background-repeat: no-repeat;
+                          background-position: center;
+                          background-size: 30px;
+                          filter: invert(1);">
+              </bug-report>
+          </div>        </div>
+      </div>
+      <footer class="text-light pt-2 vlabs-footer d-flex flex-column">
+        <div class="row px-5 mx-0">
+          <div class="col d-flex flex-column">
+            <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Community Links</span>
+            <a href="https://www.sakshat.ac.in/" class="text-light">Sakshat Portal</a>
+            <a href="http://outreach.vlabs.ac.in/" class="text-light">Outreach Portal</a>
+            <a href="https://vlab.co.in/faq" class="text-light">FAQ: Virtual Labs</a>
+          </div>
+          <div class="col d-flex flex-column">
+            <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Contact Us</span>
+            <span> Phone: General Information: 011-26582050 </span>
+            <span> Email: support@vlabs.ac.in </span>
+          </div>
+          <div class="col d-flex flex-column">
+            <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Follow Us</span>
+            <div class="social-links">
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #55acee;" href="https://twitter.com/TheVirtualLabs">
+      	  <i class="fab fa-twitter"></i>
+      	</a>
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #3b5998;" href="https://www.facebook.com/Virtual-Labs-IIT-Delhi-301510159983871/">
+      	  <i class="fab fa-facebook"></i>
+      	</a>
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #e52d27;" href="https://www.youtube.com/watch?v=asxRaOgk6a0">
+      	  <i class="fab fa-youtube"></i>
+      	</a>
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #2867B2;" href="https://in.linkedin.com/in/virtual-labs-008ba9136">
+      	  <i class="fab fa-linkedin"></i>
+      	</a>
+            </div>
+          </div>
+        </div>
+        <div class="m-0 py-2 text-center" style="font-family: &quot;Open Sans&quot;, sans-serif; background: #212121;">
+          <a class="text-primary font-weight-bold" href="https://www.gnu.org/licenses/agpl-3.0.en.html"> AGPL 3.0 </a>
+          &nbsp;&amp;&nbsp;
+          <a class="text-primary font-weight-bold" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"> Creative Commons (CC BY-NC-SA 4.0) </a>
+        </div>
+      </footer>
+    <script src="./assets/js/toggleSidebar.js"></script>
+    <script src="./assets/js/event-handler.js"></script>
+
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register("sw.js");
+        });
+      }
+    </script>
+  
+
+<script type="module" src="https://virtual-labs.github.io/svc-bug-report/client/src/bug-report.js"></script><script type="module" src="plugins/svc-rating/index.js"></script><script type="module" src="plugins/svc-rating/config.js"></script><script type="module" src="https://apis.google.com/js/api.js"></script></body></html>
